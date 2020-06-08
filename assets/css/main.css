@@ -1819,7 +1819,7 @@ i {
 p {
 	margin: 0 0 2em 0;
 	color: #555;
-	font-size: 120%;			/* Added this to match <h1> styles on index.html */	
+	font-size: 120%;			/* Added this to match <h1> styles on index.html */
 	font-weight: 400;
 }
 
@@ -2440,6 +2440,10 @@ input[type="radio"] + label:before {
 
 .image.main img {
 	width: 100%;
+}
+
+#detect-now-logo {
+	width: 110px;
 }
 
 /* List */
@@ -3529,7 +3533,7 @@ img.virufy-image {
     color: #95fbc2 !important;
     font-weight: bold;
     height: 2.75em !important;
-    line-height: 2.75em !important;	
+    line-height: 2.75em !important;
 }
 
 /* Green highlight class for text/hyperlinks */
@@ -3569,7 +3573,7 @@ img.virufy-image {
 	background: -webkit-linear-gradient(45deg, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	background-clip: text; 
+	background-clip: text;
 }
 
 /* Home -> join button div */
