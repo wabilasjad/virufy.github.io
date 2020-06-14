@@ -3462,6 +3462,13 @@ img::selection {
 	color: rgb(11, 131, 121);
 }
 
+.txt:hover {
+    text-decoration: underline;
+}
+.member-names{
+	margin: 0 0 0 0;
+}
+
 /*
 Removing the extra padding on top in the last section of the main page.
 This is very bad code and I am not proud of it.
