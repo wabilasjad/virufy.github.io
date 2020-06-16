@@ -76,12 +76,15 @@
 		<div class="inner">
 			<form method="POST" enctype="multipart/form-data" id="myForm">
 				<!-- Break -->
+				<div class="is-required">
+					<p>Required question <span class="is-required">*</span></p>
+				</div>
 				<!--Consent Question -->
 				<div class="form-group">
-						<label for="consent">Has the patient given consent for participating in this research?
+						<label for="consent">Has the patient given consent for participating in this research?<span class="is-required">*</span></label>
 				</div>
 				<div class="form-check form-check-inline" style="margin-left: 5px">
-            <input class="form-check-input" type="radio" name="consent" id="consent_yes" value="yes">
+            <input class="form-check-input"type="radio" name="consent" id="consent_yes" value="yes">
             <label class="form-check-label" for="consent_yes" style="margin-left: 3px">Yes</label>
         </div>
 
@@ -93,7 +96,7 @@
 				<br/>
 				<!-- Covid Condition -->
 				<div class="form-group">
-						<label for="gender">Please enter your COVID19 condition here (optional)</label>
+						<label for="condition">Please enter your COVID19 condition here</label>
 									<div class="form-check form-check-inline" style="margin-left: 5px">
 												<input class="form-check-input" type="radio" name="condition" id="condition_positive" value="positive">
 												<label class="form-check-label" for="condition_positive" style="margin-left: 3px">Positive</label>
@@ -133,9 +136,9 @@
 
 
 
-
 				<div class="row uniform">
 					<div id="cough">
+						<p id="cough-statement">Please record cough for 10 seconds</p>
 						<i class="fa fa-question-circle fa-3x" onclick="show_instructions()"></i>
 						<button id="recordButton">Record</button>
 						<button id="pauseButton" disabled>Pause</button>
@@ -156,7 +159,7 @@
 				<br/>
 				<!-- Gender -->
 				<div class="form-group">
-            <label for="gender">Gender * </label>
+            <label for="gender">Gender<span class="is-required">*</span></label>
                   <div class="form-check form-check-inline" style="margin-left: 5px">
                         <input class="form-check-input" type="radio" name="gender" id="gender_female" value="female">
                         <label class="form-check-label" for="gender_female" style="margin-left: 3px">Female</label>
@@ -167,9 +170,39 @@
 									</div>
         </div>
 				<br/>
+
+				<div class="row uniform">
+					<div class="6u 12u$(xsmall)">
+						<label for="country-of-origin">Country of origin:</label>
+							<select name="country" id="country">
+								<option value="" disabled selected>Select country</option>
+								<option data-countrycode="CM
+													data-tokens=" cm="" cameroon"="" value="CM">Cameroon</option>
+								<option data-countrycode="IN
+													data-tokens=" in="" india"="" value="IN">India</option>
+								<option data-countrycode="JP
+													data-tokens=" jp="" japan"="" value="JP">Japan</option>
+								<option data-countrycode="MU
+													data-tokens=" mu="" mauritius"="" value="MU">Mauritius</option>
+								<option data-countrycode="NP
+													data-tokens=" np="" nepal"="" value="NP">Nepal</option>
+								<option data-countrycode="PK
+													data-tokens=" pk="" pakistan"="" value="PK">Pakistan</option>
+								<option data-countrycode="ZA
+													data-tokens=" za="" south="" africa"="" value="ZA">South Africa</option>
+								<option data-countrycode="TT
+													data-tokens=" tt="" trinidad="" and="" tobago"="" value="TT">Trinidad and Tobago</option>
+								<option data-countrycode="US
+													data-tokens=" us="" united="" states="" of="" america"="" value="US">United States of America</option>
+								<option data-countrycode="OT
+													data-tokens=" ot="" other"="" value="OT">Other</option></select></div>
+				</div>
+
+				<br>
+
 				<!-- Smoker/Nonsmoker -->
 				<div class="12u 12u$(small)">
-						<label><span class="is-required">*</span>Is the patient a smoker?</label>
+						<label></span>Is the patient a smoker?<span class="is-required">*</span></label>
 				</div>
 
 				<div class="12u 12u$(small)" style="margin-left: 5px">
@@ -186,7 +219,7 @@
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="6u 12u$(small)">
-						<label><span class="is-required">*</span>Patient Reported Symptoms</span><br><br>
+						<label></span>Patient Reported Symptoms<span class="is-required">*</span><br><br>
 
 							<input type="checkbox" id="roundtrip1" name="reported_symptoms" value="Fever, chills, or sweating">
 							<label for="roundtrip1">Fever, chills, or sweating</label>
@@ -226,7 +259,7 @@
 				<!-- Break -->
 				<div class="row uniform">
 					<div class="6u 12u$(small)">
-						<label><span class="is-required">*</span>Medical History</label>
+						<label></span>Medical History<span class="is-required">*</span></label>
 
 						<input type="checkbox" id="roundtrip01" name="medical_history" value="Asthma or chronic lung disease">
 						<label for="roundtrip01">Asthma or chronic lung disease</label>
